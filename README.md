@@ -14,6 +14,7 @@ App:
   
   --> Install all dependencies:
 	pipenv install
+ 	--> If any problem arises while installing dependencies because of previous installations, use "pipenv --rm" and run "pipenv install" again.
 
   --> Apply migrations to set up the database: 
 	python manage.py migrate
