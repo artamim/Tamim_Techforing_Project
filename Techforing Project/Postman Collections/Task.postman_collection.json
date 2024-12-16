@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "7b6fadd7-95db-488e-93c6-0398f784a721",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40432712"
+	},
+	"item": [
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Add Task\r\n{\r\n    \"title\": \"Developing Customer Module\",\r\n    \"description\": \"Create Forms And Lists\",\r\n    \"status\": \"To Do\",\r\n    \"priority\": \"High\",\r\n    \"assigned_to\": \"itayuji\",\r\n    \"project\": \"Google\",\r\n    \"due_date\": \"2024-12-30 00:12:45.869449+06\"//eg: 2024-12-16 00:12:45.869449+06\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "List Tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//List All Tasks",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//set task id in {id}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/{id}/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Patch for updating the provided column and Put for updating all columns\r\n//place id in {id}\r\n{\r\n    \"priority\": \"Low\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/{id}/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Delete Task by setting Task ID in {id}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/{id}/"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "99333b47-0ff0-40a2-959c-52ad7e38e9af",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40432712"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Add necessery data to register a new user\r\n\r\n{\r\n    \"username\": \"itayuji\",\r\n    \"email\": \"itadori.yuji@gmail.com\",\r\n    \"password\": \"itadoriitadori\",\r\n    \"first_name\": \"Itadori\",\r\n    \"last_name\": \"Yuji\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/register/"
+			},
+			"response": []
+		},
+		{
+			"name": "Logging In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//loggin in with username and password will return \"Access Token\" and \"Refresh Token\"\r\n\r\n{\r\n    \"username\": \"\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "New Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Requesting with a \"Refresh Token\" will respond with a \"Access Token\"\r\n\r\n{\r\n    \"refresh_token\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/refreshtoken/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Details  By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "/*\r\nplacing the ID in the {id} return the Customer Information\r\n*/\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/{id}/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Patch for updating the provided column and Put for updating all columns\r\n//place id in {id}\r\n\r\n{\r\n    \"first_name\": \"Arifur Rahman\",\r\n    \"last_name\": \"Tamim\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/{id}/"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//set id in {id} to delete customer",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/{id}/"
+			},
+			"response": []
+		}
+	]
+}

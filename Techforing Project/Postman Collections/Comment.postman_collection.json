@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "41869ee9-7ab2-47ae-821c-70557f3e89f6",
+		"name": "Comment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40432712"
+	},
+	"item": [
+		{
+			"name": "Create Comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Insert data to add comment\r\n{\r\n    \"content\": \"Finish as fast as possible!!\",\r\n    \"user\": \"artamim\",\r\n    \"task\": \"Developing Customer Module\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/comments/"
+			},
+			"response": []
+		},
+		{
+			"name": "List Comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/comments/"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Comments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Retrieve a project by placing an id in {id}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/comments/{id}/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Comment",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Patch for updating the provided column and Put for updating all columns\r\n//place id in {id}\r\n\r\n{\r\n    \"content\": \"Finish as fast as possible!! Please!!!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/comments/{id}/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Add ID in {id} to delete comment",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/comments/c93a4565-63ac-4556-b679-87b8927cc5f5/"
+			},
+			"response": []
+		}
+	]
+}

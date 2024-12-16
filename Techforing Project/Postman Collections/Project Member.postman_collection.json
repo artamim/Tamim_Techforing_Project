@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "ecc44ca6-8021-4b84-bb68-d8d08ca714f9",
+		"name": "Project Member",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40432712"
+	},
+	"item": [
+		{
+			"name": "List Project Members",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/projectmembers/"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project Member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// enter a project member with a username from user and a name from project\r\n{\r\n    \"project\": \"Google\",\r\n    \"user\": \"itayuji\",\r\n    \"role\": \"Member\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/projectmembers/"
+			},
+			"response": []
+		}
+	]
+}
