@@ -1,4 +1,6 @@
-# Tamim_Techforing_Project(Software Engineer)
+# Tamim_Techforing_Project
+# Name: Arifur Rahman Tamim
+# Position: Software Engineer
 
 Postman:
     To use the APIs, import each collection in the "Postman Collections" folder. 
